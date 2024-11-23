@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização PCA</title>
+    <style>
+        .ponto {
+            position: absolute;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        #container {
+            position: relative;
+            width: 800px;
+            height: 600px;
+            border: 1px solid black;
+            background-color: #f5f5f5;
+        }
+        svg line {
+            stroke: gray;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualização PCA das Emoções</h1>
+    <div id="container">
+        <svg width="800" height="600">
+<line x1="0.0" y1="600.0" x2="476.2471910714511" y2="153.90209951278092" /><line x1="476.2471910714511" y1="153.90209951278092" x2="578.0921722434218" y2="109.51271620102368" /><line x1="578.0921722434218" y1="109.51271620102368" x2="302.14226783391763" y2="70.31071295826925" /><line x1="302.14226783391763" y1="70.31071295826925" x2="451.96372591122645" y2="165.64875172615822" /><line x1="451.96372591122645" y1="165.64875172615822" x2="581.9899243534761" y2="140.1835255058593" /><line x1="581.9899243534761" y1="140.1835255058593" x2="373.37300896163964" y2="98.88291238322428" /><line x1="373.37300896163964" y1="98.88291238322428" x2="56.515023941411094" y2="98.94756245621085" /><line x1="56.515023941411094" y1="98.94756245621085" x2="514.3252690387471" y2="69.88924414039913" /><line x1="514.3252690387471" y1="69.88924414039913" x2="252.88907826629932" y2="90.13161147232587" /><line x1="252.88907826629932" y1="90.13161147232587" x2="738.1648207009896" y2="225.2828070444187" /><line x1="738.1648207009896" y1="225.2828070444187" x2="565.768835796982" y2="149.59664762334296" /><line x1="565.768835796982" y1="149.59664762334296" x2="645.4206456350616" y2="256.8723620607587" /><line x1="645.4206456350616" y1="256.8723620607587" x2="409.72288562354925" y2="177.40126011646456" /><line x1="409.72288562354925" y1="177.40126011646456" x2="296.56085062965195" y2="168.80236378388113" /><line x1="296.56085062965195" y1="168.80236378388113" x2="78.79180054526651" y2="164.36167283855565" /><line x1="78.79180054526651" y1="164.36167283855565" x2="516.8658389345451" y2="136.0400216016898" /><line x1="516.8658389345451" y1="136.0400216016898" x2="332.852829784629" y2="44.30768326168988" /><line x1="332.852829784629" y1="44.30768326168988" x2="486.6904134262981" y2="102.03778935626417" /><line x1="486.6904134262981" y1="102.03778935626417" x2="227.07306016370094" y2="193.02342880873763" /><line x1="227.07306016370094" y1="193.02342880873763" x2="86.68508115826604" y2="117.44494030157226" /><line x1="86.68508115826604" y1="117.44494030157226" x2="198.1733030099425" y2="72.77528441221007" /><line x1="198.1733030099425" y1="72.77528441221007" x2="415.63756382500554" y2="129.28912216781129" /><line x1="415.63756382500554" y1="129.28912216781129" x2="361.87319079027907" y2="0.0" /><line x1="361.87319079027907" y1="0.0" x2="441.3399762134169" y2="38.93457749803405" /><line x1="441.3399762134169" y1="38.93457749803405" x2="449.29043635909983" y2="144.56626757667368" /><line x1="449.29043635909983" y1="144.56626757667368" x2="536.4972663253336" y2="61.24087995765183" /><line x1="536.4972663253336" y1="61.24087995765183" x2="678.6984550919354" y2="183.06890418726204" /><line x1="678.6984550919354" y1="183.06890418726204" x2="217.29394114270795" y2="32.20703446542755" /><line x1="217.29394114270795" y1="32.20703446542755" x2="230.92660910005577" y2="167.36480792923706" /><line x1="230.92660910005577" y1="167.36480792923706" x2="203.9170546108041" y2="115.76044588220284" /><line x1="203.9170546108041" y1="115.76044588220284" x2="112.74401305362665" y2="118.427692057645" /><line x1="112.74401305362665" y1="118.427692057645" x2="254.75170415978582" y2="123.27905337702106" /><line x1="254.75170415978582" y1="123.27905337702106" x2="41.076945700246796" y2="80.47865857276294" /><line x1="41.076945700246796" y1="80.47865857276294" x2="386.35831705968064" y2="145.81335229652535" /><line x1="386.35831705968064" y1="145.81335229652535" x2="547.6160064227172" y2="133.92557658197376" /><line x1="547.6160064227172" y1="133.92557658197376" x2="320.95896488845466" y2="90.1455680207494" /><line x1="320.95896488845466" y1="90.1455680207494" x2="119.53889155653951" y2="261.1222317889434" /><line x1="119.53889155653951" y1="261.1222317889434" x2="292.20457417580167" y2="413.1398925356929" /><line x1="292.20457417580167" y1="413.1398925356929" x2="795.9498624931829" y2="244.89447713880003" /><line x1="795.9498624931829" y1="244.89447713880003" x2="800.0" y2="286.5627417642105" />
+        <div class="ponto" style="top: 600.0px; left: 0.0px; background-color: #424242;" 
+             title="Tempo: 00:00 | Emoção: Eerie | Índice: 0">
+            E 0
+        </div>
+    
+        <div class="ponto" style="top: 153.90209951278092px; left: 476.2471910714511px; background-color: #388E3C;" 
+             title="Tempo: 00:05 | Emoção: Calm | Índice: 1">
+            C 1
+        </div>
+    
+        <div class="ponto" style="top: 109.51271620102368px; left: 578.0921722434218px; background-color: #388E3C;" 
+             title="Tempo: 00:10 | Emoção: Calm | Índice: 2">
+            C 2
+        </div>
+    
+        <div class="ponto" style="top: 70.31071295826925px; left: 302.14226783391763px; background-color: #FFC107;" 
+             title="Tempo: 00:15 | Emoção: Joyful | Índice: 3">
+            J 3
+        </div>
+    
+        <div class="ponto" style="top: 165.64875172615822px; left: 451.96372591122645px; background-color: #388E3C;" 
+             title="Tempo: 00:20 | Emoção: Calm | Índice: 4">
+            C 4
+        </div>
+    
+        <div class="ponto" style="top: 140.1835255058593px; left: 581.9899243534761px; background-color: #388E3C;" 
+             title="Tempo: 00:25 | Emoção: Calm | Índice: 5">
+            C 5
+        </div>
+    
+        <div class="ponto" style="top: 98.88291238322428px; left: 373.37300896163964px; background-color: #FFC107;" 
+             title="Tempo: 00:30 | Emoção: Joyful | Índice: 6">
+            J 6
+        </div>
+    
+        <div class="ponto" style="top: 98.94756245621085px; left: 56.515023941411094px; background-color: #FBC02D;" 
+             title="Tempo: 00:35 | Emoção: Energizing | Índice: 7">
+            E 7
+        </div>
+    
+        <div class="ponto" style="top: 69.88924414039913px; left: 514.3252690387471px; background-color: #388E3C;" 
+             title="Tempo: 00:40 | Emoção: Calm | Índice: 8">
+            C 8
+        </div>
+    
+        <div class="ponto" style="top: 90.13161147232587px; left: 252.88907826629932px; background-color: #FFC107;" 
+             title="Tempo: 00:45 | Emoção: Joyful | Índice: 9">
+            J 9
+        </div>
+    
+        <div class="ponto" style="top: 225.2828070444187px; left: 738.1648207009896px; background-color: #388E3C;" 
+             title="Tempo: 00:50 | Emoção: Calm | Índice: 10">
+            C 10
+        </div>
+    
+        <div class="ponto" style="top: 149.59664762334296px; left: 565.768835796982px; background-color: #388E3C;" 
+             title="Tempo: 00:55 | Emoção: Calm | Índice: 11">
+            C 11
+        </div>
+    
+        <div class="ponto" style="top: 256.8723620607587px; left: 645.4206456350616px; background-color: #388E3C;" 
+             title="Tempo: 01:00 | Emoção: Calm | Índice: 12">
+            C 12
+        </div>
+    
+        <div class="ponto" style="top: 177.40126011646456px; left: 409.72288562354925px; background-color: #388E3C;" 
+             title="Tempo: 01:05 | Emoção: Calm | Índice: 13">
+            C 13
+        </div>
+    
+        <div class="ponto" style="top: 168.80236378388113px; left: 296.56085062965195px; background-color: #FFC107;" 
+             title="Tempo: 01:10 | Emoção: Joyful | Índice: 14">
+            J 14
+        </div>
+    
+        <div class="ponto" style="top: 164.36167283855565px; left: 78.79180054526651px; background-color: #FFC107;" 
+             title="Tempo: 01:15 | Emoção: Joyful | Índice: 15">
+            J 15
+        </div>
+    
+        <div class="ponto" style="top: 136.0400216016898px; left: 516.8658389345451px; background-color: #388E3C;" 
+             title="Tempo: 01:20 | Emoção: Calm | Índice: 16">
+            C 16
+        </div>
+    
+        <div class="ponto" style="top: 44.30768326168988px; left: 332.852829784629px; background-color: #FFC107;" 
+             title="Tempo: 01:25 | Emoção: Joyful | Índice: 17">
+            J 17
+        </div>
+    
+        <div class="ponto" style="top: 102.03778935626417px; left: 486.6904134262981px; background-color: #388E3C;" 
+             title="Tempo: 01:30 | Emoção: Calm | Índice: 18">
+            C 18
+        </div>
+    
+        <div class="ponto" style="top: 193.02342880873763px; left: 227.07306016370094px; background-color: #FFC107;" 
+             title="Tempo: 01:35 | Emoção: Joyful | Índice: 19">
+            J 19
+        </div>
+    
+        <div class="ponto" style="top: 117.44494030157226px; left: 86.68508115826604px; background-color: #FFC107;" 
+             title="Tempo: 01:40 | Emoção: Joyful | Índice: 20">
+            J 20
+        </div>
+    
+        <div class="ponto" style="top: 72.77528441221007px; left: 198.1733030099425px; background-color: #FFC107;" 
+             title="Tempo: 01:45 | Emoção: Joyful | Índice: 21">
+            J 21
+        </div>
+    
+        <div class="ponto" style="top: 129.28912216781129px; left: 415.63756382500554px; background-color: #388E3C;" 
+             title="Tempo: 01:50 | Emoção: Calm | Índice: 22">
+            C 22
+        </div>
+    
+        <div class="ponto" style="top: 0.0px; left: 361.87319079027907px; background-color: #FFC107;" 
+             title="Tempo: 01:55 | Emoção: Joyful | Índice: 23">
+            J 23
+        </div>
+    
+        <div class="ponto" style="top: 38.93457749803405px; left: 441.3399762134169px; background-color: #FFC107;" 
+             title="Tempo: 02:00 | Emoção: Joyful | Índice: 24">
+            J 24
+        </div>
+    
+        <div class="ponto" style="top: 144.56626757667368px; left: 449.29043635909983px; background-color: #388E3C;" 
+             title="Tempo: 02:05 | Emoção: Calm | Índice: 25">
+            C 25
+        </div>
+    
+        <div class="ponto" style="top: 61.24087995765183px; left: 536.4972663253336px; background-color: #388E3C;" 
+             title="Tempo: 02:10 | Emoção: Calm | Índice: 26">
+            C 26
+        </div>
+    
+        <div class="ponto" style="top: 183.06890418726204px; left: 678.6984550919354px; background-color: #388E3C;" 
+             title="Tempo: 02:15 | Emoção: Calm | Índice: 27">
+            C 27
+        </div>
+    
+        <div class="ponto" style="top: 32.20703446542755px; left: 217.29394114270795px; background-color: #FFC107;" 
+             title="Tempo: 02:20 | Emoção: Joyful | Índice: 28">
+            J 28
+        </div>
+    
+        <div class="ponto" style="top: 167.36480792923706px; left: 230.92660910005577px; background-color: #FFC107;" 
+             title="Tempo: 02:25 | Emoção: Joyful | Índice: 29">
+            J 29
+        </div>
+    
+        <div class="ponto" style="top: 115.76044588220284px; left: 203.9170546108041px; background-color: #FFC107;" 
+             title="Tempo: 02:30 | Emoção: Joyful | Índice: 30">
+            J 30
+        </div>
+    
+        <div class="ponto" style="top: 118.427692057645px; left: 112.74401305362665px; background-color: #FFC107;" 
+             title="Tempo: 02:35 | Emoção: Joyful | Índice: 31">
+            J 31
+        </div>
+    
+        <div class="ponto" style="top: 123.27905337702106px; left: 254.75170415978582px; background-color: #FFC107;" 
+             title="Tempo: 02:40 | Emoção: Joyful | Índice: 32">
+            J 32
+        </div>
+    
+        <div class="ponto" style="top: 80.47865857276294px; left: 41.076945700246796px; background-color: #FBC02D;" 
+             title="Tempo: 02:45 | Emoção: Energizing | Índice: 33">
+            E 33
+        </div>
+    
+        <div class="ponto" style="top: 145.81335229652535px; left: 386.35831705968064px; background-color: #388E3C;" 
+             title="Tempo: 02:50 | Emoção: Calm | Índice: 34">
+            C 34
+        </div>
+    
+        <div class="ponto" style="top: 133.92557658197376px; left: 547.6160064227172px; background-color: #388E3C;" 
+             title="Tempo: 02:55 | Emoção: Calm | Índice: 35">
+            C 35
+        </div>
+    
+        <div class="ponto" style="top: 90.1455680207494px; left: 320.95896488845466px; background-color: #FFC107;" 
+             title="Tempo: 03:00 | Emoção: Joyful | Índice: 36">
+            J 36
+        </div>
+    
+        <div class="ponto" style="top: 261.1222317889434px; left: 119.53889155653951px; background-color: #FBC02D;" 
+             title="Tempo: 03:05 | Emoção: Energizing | Índice: 37">
+            E 37
+        </div>
+    
+        <div class="ponto" style="top: 413.1398925356929px; left: 292.20457417580167px; background-color: #424242;" 
+             title="Tempo: 03:10 | Emoção: Eerie | Índice: 38">
+            E 38
+        </div>
+    
+        <div class="ponto" style="top: 244.89447713880003px; left: 795.9498624931829px; background-color: #388E3C;" 
+             title="Tempo: 03:15 | Emoção: Calm | Índice: 39">
+            C 39
+        </div>
+    
+        <div class="ponto" style="top: 286.5627417642105px; left: 800.0px; background-color: #388E3C;" 
+             title="Tempo: 03:20 | Emoção: Calm | Índice: 40">
+            C 40
+        </div>
+    
+    </svg>
+    </div>
+</body>
+</html>
